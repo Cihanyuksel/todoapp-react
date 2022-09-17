@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { TodoContext } from "../context/TodoContext";
 import { Icon } from "../Icon/Icon";
@@ -14,7 +14,6 @@ function EditTodo({todo, setEditOpen, editOpen}) {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    // e.stopPropagation();
 
     try {
         if(content.length >= 3 ) {
@@ -40,7 +39,6 @@ function EditTodo({todo, setEditOpen, editOpen}) {
   }
 
   const modalClose = e  => {
-    // e.stopPropagation();
     setEditOpen(false)
   }
 
